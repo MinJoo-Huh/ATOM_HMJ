@@ -1,0 +1,10 @@
+C:\Users\huhmi\Desktop\동아리\강아지앱\K_means(3)\K_means(3)\bin\Debug\K_means(3).exe.config
+C:\Users\huhmi\Desktop\동아리\강아지앱\K_means(3)\K_means(3)\bin\Debug\K_means(3).exe
+C:\Users\huhmi\Desktop\동아리\강아지앱\K_means(3)\K_means(3)\bin\Debug\K_means(3).pdb
+C:\Users\huhmi\Desktop\동아리\강아지앱\K_means(3)\K_means(3)\obj\Debug\K_means(3).csprojAssemblyReference.cache
+C:\Users\huhmi\Desktop\동아리\강아지앱\K_means(3)\K_means(3)\obj\Debug\K_means_3_.Form1.resources
+C:\Users\huhmi\Desktop\동아리\강아지앱\K_means(3)\K_means(3)\obj\Debug\K_means_3_.Properties.Resources.resources
+C:\Users\huhmi\Desktop\동아리\강아지앱\K_means(3)\K_means(3)\obj\Debug\K_means(3).csproj.GenerateResource.cache
+C:\Users\huhmi\Desktop\동아리\강아지앱\K_means(3)\K_means(3)\obj\Debug\K_means(3).csproj.CoreCompileInputs.cache
+C:\Users\huhmi\Desktop\동아리\강아지앱\K_means(3)\K_means(3)\obj\Debug\K_means(3).exe
+C:\Users\huhmi\Desktop\동아리\강아지앱\K_means(3)\K_means(3)\obj\Debug\K_means(3).pdb
