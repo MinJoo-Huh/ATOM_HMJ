@@ -52,22 +52,22 @@ namespace K_means_3_
             // 1. 중심값 랜덤으로 결정
             Random rand = new Random();
 
-            int[] n = new int[cluster];
+            int[] n = new int[cluster]; // 각 클러스터의 임시 중심값(데이터의 인덱스를 저장)
             for (int c = 0; c < cluster; c++)
             {
-                Boolean check = true;
+                Boolean check = true; // 중복 확인용
                 while (check) {
                     n[c] = rand.Next(1, data);
                     check = false;
                     for (int i = 0; i < c; i++)
                     {
-                        if (n[i] == n[c]) check = true;
+                        if (n[i] == n[c]) check = true; // 랜덤수 중복 확인
                     }
                 }
                 
                 for(int s = 0; s < dimension; s++)
                 {
-                    result[c, n[c]] = 1;
+                    result[c, n[c]] = 1; // 저장
                 }
             }
 
