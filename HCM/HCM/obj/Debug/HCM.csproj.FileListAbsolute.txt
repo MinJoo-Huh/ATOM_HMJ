@@ -1,0 +1,10 @@
+C:\Users\huhmi\Desktop\동아리\강아지앱\HCM\HCM\bin\Debug\HCM.exe.config
+C:\Users\huhmi\Desktop\동아리\강아지앱\HCM\HCM\bin\Debug\HCM.exe
+C:\Users\huhmi\Desktop\동아리\강아지앱\HCM\HCM\bin\Debug\HCM.pdb
+C:\Users\huhmi\Desktop\동아리\강아지앱\HCM\HCM\obj\Debug\HCM.csprojAssemblyReference.cache
+C:\Users\huhmi\Desktop\동아리\강아지앱\HCM\HCM\obj\Debug\HCM.Form1.resources
+C:\Users\huhmi\Desktop\동아리\강아지앱\HCM\HCM\obj\Debug\HCM.Properties.Resources.resources
+C:\Users\huhmi\Desktop\동아리\강아지앱\HCM\HCM\obj\Debug\HCM.csproj.GenerateResource.cache
+C:\Users\huhmi\Desktop\동아리\강아지앱\HCM\HCM\obj\Debug\HCM.csproj.CoreCompileInputs.cache
+C:\Users\huhmi\Desktop\동아리\강아지앱\HCM\HCM\obj\Debug\HCM.exe
+C:\Users\huhmi\Desktop\동아리\강아지앱\HCM\HCM\obj\Debug\HCM.pdb
