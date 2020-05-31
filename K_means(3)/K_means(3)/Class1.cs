@@ -18,7 +18,7 @@ namespace K_means_3_
         int[,] result = null; // result : (0, 1) -> membership degree
 
         int[] c_number = null; // the number of data in cluster
-        Boolean loop = false; // repetitive
+        //Boolean loop = false; // repetitive
 
         Random rand = new Random();
 
@@ -49,15 +49,43 @@ namespace K_means_3_
 
         private void Run()
         {
-            // 1. 소속도 랜덤으로 결정
+            // 1. 중심값 랜덤으로 결정
+            Random rand = new Random();
 
-            int c = 0;
-            for (int d = 0; d < data; d++)
+            int[] n = new int[cluster];
+            for (int c = 0; c < cluster; c++)
             {
-                result[c, d] = 1;
-                c++;
-                if (c >= cluster) c = 0;
+                Boolean check = true;
+                while (check) {
+                    n[c] = rand.Next(1, data);
+                    check = false;
+                    for (int i = 0; i < c; i++)
+                    {
+                        if (n[i] == n[c]) check = true;
+                    }
+                }
+                
+                for(int s = 0; s < dimension; s++)
+                {
+                    result[c, n[c]] = 1;
+                }
             }
+
+            // 소속도 모두 채워주기
+            Console.WriteLine("\n********** 반복!! **********");
+            Center_cal();
+            Console.WriteLine("거리 계산");
+            Dis_cal();
+            Print();
+
+            Console.WriteLine("소속도 정하기");
+            Dis_comp();
+            Print();
+
+            Console.WriteLine("중심값 계산하기");
+            Center_move();
+            Center_cal();
+            Print();
 
             do
             {
