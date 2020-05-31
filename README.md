@@ -1,2 +1,2 @@
 # ATOM_HMJ
-Club
+Study AI
