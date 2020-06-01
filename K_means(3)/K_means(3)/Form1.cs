@@ -21,6 +21,7 @@ namespace K_means_3_
         {
             Class1 kmeans = new Class1();
             kmeans.Start();
+            textBox1.Text = kmeans.toString;
         }
     }
 }

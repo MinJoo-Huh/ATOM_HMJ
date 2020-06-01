@@ -20,6 +20,8 @@ namespace K_means_3_
         int[] c_number = null; // the number of data in cluster
         //Boolean loop = false; // repetitive
 
+        public String toString = null;
+
         Random rand = new Random();
 
         // 이쿠죠!
@@ -57,7 +59,7 @@ namespace K_means_3_
             {
                 Boolean check = true; // 중복 확인용
                 while (check) {
-                    n[c] = rand.Next(1, data);
+                    n[c] = rand.Next(0, data);
                     check = false;
                     for (int i = 0; i < c; i++)
                     {
@@ -71,6 +73,7 @@ namespace K_means_3_
                 }
             }
 
+            /* 
             // 소속도 모두 채워주기
             Console.WriteLine("\n********** 반복!! **********");
             Center_cal();
@@ -86,7 +89,26 @@ namespace K_means_3_
             Center_move();
             Center_cal();
             Print();
+            */
 
+            while(true){
+                Center_cal();
+                Print();
+                if (Center_com()) break;
+                toString += "\r\n******** 반복!! **********\r\n"; // Console.WriteLine("\n********** 반복!! **********");
+                toString += "** 거리 계산 **\r\n"; // Console.WriteLine("** 거리 계산 **");
+                Dis_cal();
+                Print();
+
+                toString += "** 소속도 정하기 **\r\n"; // Console.WriteLine("** 소속도 정하기 ** ");
+                Dis_comp();
+                Print();
+
+                toString += "** 중심값 계산하기 **\r\n"; // Console.WriteLine("** 중심값 계산하기 **");
+                Center_move();
+            }
+
+            /*
             do
             {
                 Console.WriteLine("\n********** 반복!! **********");
@@ -105,10 +127,11 @@ namespace K_means_3_
                 Print();
 
                 if (Center_com()) break;
-            } while (true);
+            } while (true);*/
 
         }
 
+        /*
         private void Check()
         {
             for (int c = 0; c < cluster; c++)
@@ -123,7 +146,7 @@ namespace K_means_3_
                     Run();
                 }
             }
-        }
+        }*/ // 위에서는 아예 지웠는데... 이건 왜 안지웠짘ㅋㅋㅋ
 
         // 중심값 구하기
         private void Center_cal()
@@ -165,6 +188,7 @@ namespace K_means_3_
         }
 
         //확인
+        /*
         private void Print()
         {
             Console.WriteLine("중심값");
@@ -198,6 +222,41 @@ namespace K_means_3_
                 Console.WriteLine();
             }
             Console.WriteLine();
+        }*/
+
+        private void Print()
+        {
+            toString += "\r\n중심값 \r\n"; //Console.WriteLine("중심값");
+            for (int c = 0; c < cluster; c++)
+            {
+                for (int s = 0; s < dimension; s++)
+                {
+                    toString += center[c, s] + " "; //Console.Write(center[c, s] + " ");
+                }
+                toString += "\r\n"; //Console.WriteLine();
+            }
+
+            // 소속도 확인
+            toString += "\r\n소속도 확인\r\n"; //Console.Write("소속도 확인 \n");
+            for (int c = 0; c < cluster; c++)
+            {
+                for (int d = 0; d < data; d++)
+                {
+                    toString += result[c, d]; // Console.Write(result[c, d]);
+                }
+                toString += "\r\n"; // Console.WriteLine();
+            }
+
+            toString += "\r\n거리 확인\r\n"; // Console.WriteLine("\n거리 확인");
+            for (int c = 0; c < cluster; c++)
+            {
+                for (int d = 0; d < data; d++)
+                {
+                    toString += dis[c, d] + " "; // Console.Write(dis[c, d] + " ");
+                }
+                toString += "\r\n"; // Console.WriteLine();
+            }
+            toString += "\r\n"; // Console.WriteLine();
         }
 
         // 거리 비교 및 소속도 변경
